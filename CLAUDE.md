@@ -20,6 +20,10 @@ Directory routes (`/story`, `/writing`) resolve the same locally as on Vercel.
 
 Hosted on Vercel as `ryllc/mattforni-com` (Vercel no longer allows personal accounts as a project scope, so it lives on the `ryllc` team). Root `vercel.json` declares buildless static output from `site/` with clean URLs. Pushes to `main` deploy to production through the Vercel git integration; pull requests get preview deploys. `home.mattforni.com` is a CNAME to Vercel. **A merge to main is an immediate production deploy.** GitHub Pages was retired at DNS cutover (2026-07-07) and must stay disabled in repo settings. The repo was renamed from mattforni.github.io to mattforni after the cutover.
 
+## Code Review Bots
+
+**CodeRabbit (Pro Plus) reviews PRs on this repo.** It approves or requests changes within minutes of a push; treat its findings per GC's triage guidance (fix real issues, reason-decline style opinions that contradict deliberate design choices, dismiss the stale review after declining). Discovered 2026-07-29 on PR #5, where it flagged deliberate aesthetic choices (the ⌘P print hint, the terminal-eyebrow headings) that were correctly declined.
+
 ## Structure and Conventions
 
 - `site/` is the deployable unit: `index.html` (home), `story/index.html`, `writing/index.html`, `404.html`, `styles.css`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `robots.txt`, `sitemap.xml`, `llms.txt`.
