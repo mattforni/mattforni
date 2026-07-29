@@ -1,4 +1,4 @@
-# Matt "Forni" Fornaciari
+# Matthew "Forni" Fornaciari
 
 > Personal site of Matthew "Forni" Fornaciari: engineer in Denver, Colorado. Co-founder and CTO of Gremlin (est. 2016), where chaos engineering became a discipline. Earlier: Amazon and Salesforce. Later: climate technology at QuitCarbon and Zero Homes. Today he consults through Reliably Yours and writes essays at Atelic Action. Brown University, applied mathematics and computer science.
 
