@@ -2,7 +2,7 @@
 body{margin:0;background:#f6f1e7;color:#23201a;font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}a:hover{color:#23201a;text-decoration:underline}
 .mono{font-family:var(--mono)}
-.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 
 /* utilities (formerly injected by the design runtime) */
 .fx{display:flex}
