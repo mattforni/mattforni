@@ -1,6 +1,6 @@
 # mattforni.com
 
-The personal site of Matt "Forni" Fornaciari, served at [mattforni.com](https://mattforni.com/). `home.mattforni.com` stays alive as a permanent 301 to the apex so existing backlinks, index entries, and AI citations follow.
+The personal site of Matthew "Forni" Fornaciari, served at [mattforni.com](https://mattforni.com/). `home.mattforni.com` stays alive as a permanent 301 to the apex so existing backlinks, index entries, and AI citations follow.
 
 A canonical, evergreen reputation home: when a person, a search engine, or an AI assistant asks who Matt Fornaciari is, this site is the answer they find and cite. Warm editorial typography with a terminal wink, honoring the site's previous life as a full screen `whoami`.
 
@@ -12,7 +12,6 @@ Pure static HTML. No framework, no build step.
 site/            # The deployable site, published as-is
 ├── index.html   # Home
 ├── story/       # The career narrative
-├── writing/     # Essay index (Atelic Action)
 ├── 404.html     # Terminal-flavored not-found page
 ├── styles.css   # Shared stylesheet
 ├── favicon.svg
@@ -41,7 +40,7 @@ Directory-style routes (`/story`, `/writing`) resolve the same way locally as on
 ## Notes and Deferred Items
 
 - **Life beyond work page**: the original brief sketched a fourth page (mountains, kitchen, food access volunteering). The design consolidated to three pages; add it later if it earns its place, and extend `sitemap.xml` and the nav when it lands.
-- **Writing page upkeep**: essay cards are hand-maintained. When a new essay ships on Substack, add a card to `site/writing/index.html` and a `ListItem` to its JSON-LD.
+- **Writing moved to the practice** (2026-08-15): the essay index lives at [atelic.me/writing](https://atelic.me/writing) in the Atelic repo; `/writing` here 301s to it via `vercel.json`. New essays get their card there, not here. This site is a frozen reputation anchor: no new pages, updated only when the story or resume changes.
 - **og:image**: no social share image yet. A simple cream card with the `forni ~` wordmark would do.
 - **Root domain**: done 2026-08-15. The canonical host is `mattforni.com`; every reference in `site/` was swept (canonicals, og:url, JSON-LD `@id`s and `url`s, `sitemap.xml`, `robots.txt`, `llms.txt`), and `home.mattforni.com` remains a permanent 301 to the apex.
 - **Self-hosted fonts**: the Google Fonts stylesheet is the only render-blocking third-party request and the dominant cold-load LCP cost. Self-hosting the two families as preloaded woff2 with a metric-compatible fallback (`size-adjust`/`ascent-override`) would remove the extra connections and the font-swap layout shift.

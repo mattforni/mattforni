@@ -3,7 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/activities", "destination": "/", "permanent": true }
+    { "source": "/activities", "destination": "/", "permanent": true },
+    { "source": "/writing", "destination": "https://atelic.me/writing", "permanent": true }
   ],
   "headers": [
     {
