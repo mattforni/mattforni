@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-The personal site of Matt "Forni" Fornaciari, served at https://home.mattforni.com/. It is a reputation home: evergreen, built to be the canonical answer when a person, search engine, or AI assistant asks who Matt Fornaciari is. Pure static HTML in `site/` with no framework, no dependencies, and no build step.
+The personal site of Matthew "Forni" Fornaciari, served at https://mattforni.com/ (the `home.` subdomain 301s to the apex). It is a reputation home: evergreen, built to be the canonical answer when a person, search engine, or AI assistant asks who Matt Fornaciari is. Pure static HTML in `site/` with no framework, no dependencies, and no build step.
 
 ## Commands
 
@@ -18,7 +18,7 @@ Directory routes (`/story`, `/writing`) resolve the same locally as on Vercel.
 
 ## Deploy
 
-Hosted on Vercel as `ryllc/mattforni-com` (Vercel no longer allows personal accounts as a project scope, so it lives on the `ryllc` team). Root `vercel.json` declares buildless static output from `site/` with clean URLs. Pushes to `main` deploy to production through the Vercel git integration; pull requests get preview deploys. `home.mattforni.com` is a CNAME to Vercel. **A merge to main is an immediate production deploy.** GitHub Pages was retired at DNS cutover (2026-07-07) and must stay disabled in repo settings. The repo was renamed from mattforni.github.io to mattforni after the cutover.
+Hosted on Vercel as `atelic-team/mattforni-com` (Vercel no longer allows personal accounts as a project scope, so it lives on the `atelic-team` team, the slug renamed from `ryllc` on 2026-07-20). Root `vercel.json` declares buildless static output from `site/` with clean URLs. Pushes to `main` deploy to production through the Vercel git integration; pull requests get preview deploys. `mattforni.com` is the primary domain; `www.` and `home.` are attached as permanent redirects to it. **A merge to main is an immediate production deploy.** GitHub Pages was retired at DNS cutover (2026-07-07) and must stay disabled in repo settings. The repo was renamed from mattforni.github.io to mattforni after the cutover.
 
 ## Code Review Bots
 
@@ -26,14 +26,14 @@ Hosted on Vercel as `ryllc/mattforni-com` (Vercel no longer allows personal acco
 
 ## Structure and Conventions
 
-- `site/` is the deployable unit: `index.html` (home), `story/index.html`, `writing/index.html`, `404.html`, `styles.css`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `robots.txt`, `sitemap.xml`, `llms.txt`.
+- `site/` is the deployable unit: `index.html` (home), `story/index.html`, `career/index.html`, `404.html`, `styles.css`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `robots.txt`, `sitemap.xml`, `llms.txt`.
 - `design/` holds the Claude Design export the site was assembled from ([design project](https://claude.ai/design/p/5a6982d7-dc9e-4c32-950c-736d5fc86326)). It is provenance, not deployed; the live pages in `site/` are the source of truth and have diverged from it (real essay titles, cascade fixes, SEO heads).
-- Each page hand-authors its own head: unique title, meta description, canonical, Open Graph, Twitter card, and JSON-LD. The home page defines the `Person` entity at `@id: https://home.mattforni.com/#person`; other pages reference that `@id` and repeat only the minimal Person fields (name, alternateName, url) so each page's structured data stands alone for per-page crawlers. When touching one head, keep the others consistent.
+- Each page hand-authors its own head: unique title, meta description, canonical, Open Graph, Twitter card, and JSON-LD. The home page defines the `Person` entity at `@id: https://mattforni.com/#person`; other pages reference that `@id` and repeat only the minimal Person fields (name, alternateName, url) so each page's structured data stands alone for per-page crawlers. When touching one head, keep the others consistent.
 - Adding or renaming a page means updating the nav on every page, `sitemap.xml`, and `llms.txt` together.
-- The Writing page's essay cards are hand-maintained. A new essay needs a card in `site/writing/index.html` and a matching `ListItem` in that page's JSON-LD; the name and URL must match the card exactly, and a quick grep for the title should return one hit in the markup and one in the JSON-LD.
+- The Writing page moved to the practice (2026-08-15): the essay index lives at atelic.me/writing in the Atelic repo, and `/writing` here 301s to it via `vercel.json`. New essays get their card there. This site is a frozen reputation anchor: no new pages, no build-out; it changes only when the story or resume changes.
 - Voice and aesthetic: warm editorial serif (Newsreader) with a terminal wink (IBM Plex Mono `$ command` eyebrows). Copy stays evergreen: no "currently," no dated status lines. The play lives in the terminal conceit; the content stays real, semantic, crawlable HTML.
 - CSS gotcha: single-class selectors share specificity, so later rules in `styles.css` silently win. Set only the sides you mean (e.g. `.sect{padding-top:44px}`, never a `padding` shorthand that would zero `.wrap`'s horizontal gutters).
 
 ## Deferred Items
 
-Tracked in `README.md`: a possible "life beyond work" page, an og:image for link previews, and a potential move from the `home.` subdomain to the root domain (which would require updating canonicals, JSON-LD `@id`s, sitemap, robots, and llms.txt together).
+Tracked in `README.md`: a possible "life beyond work" page and an og:image for link previews. (The move from the `home.` subdomain to the root domain landed 2026-08-15.)

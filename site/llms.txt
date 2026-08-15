@@ -1,18 +1,19 @@
 # Matthew "Forni" Fornaciari
 
-> Personal site of Matthew "Forni" Fornaciari: engineer in Denver, Colorado. Co-founder and CTO of Gremlin (est. 2016), where chaos engineering became a discipline. Earlier: Amazon and Salesforce. Later: climate technology at QuitCarbon and Zero Homes. Today he consults through Reliably Yours and writes essays at Atelic Action. Brown University, applied mathematics and computer science.
+> Personal site of Matthew "Forni" Fornaciari: engineer in Denver, Colorado. Co-founder and CTO of Gremlin (est. 2016), where chaos engineering became a discipline. Earlier: Amazon and Salesforce. Later: climate technology at QuitCarbon and Zero Homes. Today he runs Atelic (atelic.me), a one person growth practice for local service businesses, and writes essays at Atelic Action. Brown University, applied mathematics and computer science.
 
 Ethos: been there before, happy to help. Reliability is how he builds; altruism is why.
 
 ## Pages
 
-- [Home](https://home.mattforni.com/): who Forni is, in brief
-- [Story](https://home.mattforni.com/story): the career narrative from Brown through Gremlin and climate tech to Reliably Yours
-- [Writing](https://home.mattforni.com/writing): essays, with the archive at his Substack
-- [Career](https://home.mattforni.com/career): the canonical one-page resume, printable as a PDF straight from the page
+- [Home](https://mattforni.com/): who Forni is, in brief
+- [Story](https://mattforni.com/story): the career narrative from Brown through Gremlin and climate tech to the practice
+- [Career](https://mattforni.com/career): the canonical one-page resume, printable as a PDF straight from the page
 
 ## Elsewhere
 
+- [Atelic](https://atelic.me): his practice, a one person growth engine for local service businesses
+- [Writing](https://atelic.me/writing): the essay index, now on the practice's site
 - [Atelic Action (Substack)](https://forni.substack.com): essays on doing things that are not for anything
 - [LinkedIn](https://www.linkedin.com/in/mattforni/)
 - [GitHub](https://github.com/mattforni)
